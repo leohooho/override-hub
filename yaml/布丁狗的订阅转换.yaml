@@ -90,6 +90,12 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  ai_domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-chat-!cn.list
   steam:
     url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml
     path: ./ruleset/steam.yaml
@@ -190,6 +196,7 @@ rules:
   - "RULE-SET,bard,AIGC"
   - "RULE-SET,openai,AIGC"
   - "RULE-SET,claude,AIGC"
+  - "RULE-SET,ai_domain,AIGC"
   - "RULE-SET,steam,PROXY"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
